@@ -362,6 +362,6 @@ Rencana eksekusi ada di [plan/2026-11-23-mvp-cms-implementation.md](plan/2026-11
 | Q-4 | Apakah "Gabung Komunitas" di navbar menuju WhatsApp (asumsi saat ini) atau scroll ke CTA? | F-01 |
 | Q-5 | Desain `/webinar`, detail webinar, registrasi, newsletter? | F-07, F-13, F-14 |
 | Q-6 | Domain produksi? | F-12, deploy |
-| Q-7 | Hero slider autoplay atau manual saja? (tidak bisa dibaca dari Figma statis) | C-12 |
+| ~~Q-7~~ | ~~Hero slider autoplay atau manual saja?~~ **Terjawab:** autoplay 5 detik, pause saat hover/focus, nonaktif jika `prefers-reduced-motion` | C-12 |
 | ~~Q-8~~ | ~~Desain CMS~~ **Terjawab:** ikuti desain admin Albana Speech Academy ([design/design-admin.md](design/design-admin.md)) | F-16 – F-19 |
 | Q-9 | Siapa admin pertama (email), dan siapa pemilik Google Cloud project untuk OAuth client? | F-16, F-19, plan Fase 7 & 12 |
