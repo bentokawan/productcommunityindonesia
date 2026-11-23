@@ -28,8 +28,8 @@ F0 Fondasi ─┬─ F1 Design system web ─┬─ F3 Layout shell ─ F4 Secti
 ---
 
 ## Fase 0 — Fondasi proyek
-- [ ] `git init`, `.gitignore` (Next.js + `.env*` kecuali `.env.example`), branch `main`
-- [ ] `pnpm create next-app` (TypeScript, App Router, `src/`, Tailwind v4, ESLint), tanpa contoh boilerplate. Catat versi Next (16 → `proxy.ts` & `updateTag`; 15 → `middleware.ts` & `revalidateTag`) di ARCHITECTURE
+- [x] `git init`, `.gitignore` (Next.js + `.env*` kecuali `.env.example`), branch `main`
+- [x] `pnpm create next-app` (TypeScript, App Router, `src/`, Tailwind v4, ESLint), tanpa contoh boilerplate. Catat versi Next (16 → `proxy.ts` & `updateTag`; 15 → `middleware.ts` & `revalidateTag`) di ARCHITECTURE *(Next.js `16.4.6` sudah terpasang di `project/` tanpa `src/` dan memakai `npm`/`package-lock.json`)*
 - [ ] `tsconfig`: `strict`, `noUncheckedIndexedAccess`, alias `@/*`
 - [ ] Prettier + `prettier-plugin-tailwindcss`. ESLint `typescript-eslint` strict
 - [ ] Dependency: `@supabase/supabase-js`, `zod`, `class-variance-authority`, `clsx`, `tailwind-merge`, `lucide-react`, `@vercel/analytics`, `@vercel/speed-insights`, `server-only`
