@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="27.1662" height="28.4227" viewBox="0 0 27.1662 28.4227" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Bulb">
+<path id="Glass" d="M13.5831 6.25299C17.1147 6.25299 19.8313 9.09526 19.8313 12.7902C19.8313 15.3483 18.473 17.0536 17.3863 18.4747C16.5714 19.6117 16.2997 20.4643 16.2997 21.317H10.8665C10.8665 20.4643 10.5948 19.6117 9.77982 18.4747C8.69317 17.0536 7.33486 15.3483 7.33486 12.7902C7.33486 9.09526 10.0515 6.25299 13.5831 6.25299Z" fill="#F6C65B"/>
+<rect id="Base" x="10.8665" y="21.8855" width="5.43323" height="1.27902" rx="0.639511" fill="#4B5260"/>
+<rect id="Base_2" x="11.1381" y="23.4487" width="4.88991" height="1.27902" rx="0.639511" fill="#4B5260"/>
+<rect id="Tip" x="12.4964" y="25.012" width="2.17329" height="0.994794" rx="0.497397" fill="#4B5260"/>
+<path id="Ray" d="M13.5831 4.2634V2.27382" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_2" d="M7.82026 6.76085L6.47561 5.354" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_3" d="M19.3459 6.76085L20.6905 5.354" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_4" d="M5.43323 12.7902H3.5316" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_5" d="M21.7329 12.7902H23.6346" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_6" d="M6.19681 16.3938L4.47334 17.2346" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+<path id="Ray_7" d="M20.9693 16.3938L22.6928 17.2346" stroke-width="0.934615" stroke-linecap="round" stroke="#F6C65B"/>
+</g>
+</svg>

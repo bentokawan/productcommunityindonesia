@@ -78,47 +78,50 @@ flowchart LR
 
 ```
 .
+├─ .github/                          # CI workflow (working-directory: project)
+├─ .gitignore
 ├─ AGENTS.md                         # ringkasan instruksi agent (root)
 ├─ docs/                             # README · PRD · ARCHITECTURE · AGENTS · design/ (design-web, design-admin) · plan/
-├─ public/                           # logo-pci.svg · og-default.png · favicon.ico · ornaments/
-├─ supabase/                         # lihat §3.2
-├─ src/
-│  ├─ proxy.ts                       # refresh sesi Supabase + guard /admin/* (Next 16; `middleware.ts` di Next 15)
-│  ├─ app/
-│  │  ├─ layout.tsx                  # <html lang="id">, font DM Sans/Mono, globals.css
-│  │  ├─ globals.css                 # token situs (design-web §7) + token `.admin-shell` (design-admin §2.5)
-│  │  ├─ (site)/                     # ── situs publik (statis) ──
-│  │  │  ├─ layout.tsx               # Analytics, SpeedInsights
-│  │  │  ├─ page.tsx                 # landing: F-01…F-11
-│  │  │  └─ webinar/page.tsx         # F-07 (P1)
-│  │  ├─ (admin)/admin/              # ── CMS (dinamis, noindex) · lihat §9 ──
-│  │  ├─ api/revalidate/route.ts
-│  │  ├─ sitemap.ts · robots.ts      # F-12 (robots: disallow /admin)
-│  │  └─ not-found.tsx · error.tsx
-│  ├─ components/
-│  │  ├─ ui/                         # situs: C-03, C-05, C-06, C-07, C-08, C-19, C-22, C-26 · primitif shadcn untuk CMS (dialog, select, checkbox, label, dropdown-menu, tooltip)
-│  │  └─ layout/                     # C-01, C-02, C-04, container.tsx, section.tsx
-│  ├─ features/
-│  │  ├─ home/                       # C-10…C-14, C-17, C-18, C-24, C-25, faq-section
-│  │  ├─ webinar/                    # webinar-section, C-20, C-21, webinar-tabs (client)
-│  │  └─ admin/                      # modul CMS · lihat §9.4
-│  ├─ content/
-│  │  ├─ about.ts                    # Visi & Misi
-│  │  └─ fallback-links.ts           # link WA/IG/LinkedIn bila site_settings gagal
-│  └─ lib/
-│     ├─ supabase/
-│     │  ├─ server.ts                # anon, tanpa cookie → situs publik (cacheable)
-│     │  ├─ server-auth.ts           # @supabase/ssr, cookie sesi → CMS (Fase CMS)
-│     │  ├─ admin.ts                 # service_role + `import "server-only"` → hanya modul Pengguna (Fase CMS)
-│     │  ├─ storage.ts               # publicUrl(path)
-│     │  └─ database.types.ts        # generated
-│     ├─ queries/                    # publik: satu file per domain, cache + tag
-│     │  └─ admin/                   # CMS: tanpa cache, klien server-auth
-│     ├─ auth/                       # session.ts (requireStaff/requireAdmin) · permissions.ts (Fase CMS)
-│     ├─ env.ts · seo.ts · analytics.ts · utils.ts
-└─ tests/
-   ├─ unit/                          # vitest
-   └─ e2e/                           # playwright: site (390 & 1440) + admin
+├─ supabase/                         # lihat §3.2 (bersama untuk frontend & backend tambahan)
+└─ project/                          # aplikasi Next.js (Root Directory di Vercel)
+   ├─ public/                        # ornaments/ · placeholders/ · logo-pci.svg · og-default.png
+   ├─ src/
+   │  ├─ proxy.ts                    # refresh sesi Supabase + guard /admin/* (Next 16)
+   │  ├─ app/
+   │  │  ├─ layout.tsx               # <html lang="id">, font DM Sans/Mono, globals.css
+   │  │  ├─ globals.css              # token situs (design-web §7) + token `.admin-shell` (design-admin §2.5)
+   │  │  ├─ (site)/                  # ── situs publik (statis) ──
+   │  │  │  ├─ layout.tsx            # Analytics, SpeedInsights
+   │  │  │  ├─ page.tsx              # landing: F-01…F-11
+   │  │  │  └─ webinar/page.tsx      # F-07 (P1)
+   │  │  ├─ (admin)/admin/           # ── CMS (dinamis, noindex) · lihat §9 ──
+   │  │  ├─ api/revalidate/route.ts
+   │  │  ├─ sitemap.ts · robots.ts   # F-12 (robots: disallow /admin)
+   │  │  └─ not-found.tsx · error.tsx
+   │  ├─ components/
+   │  │  ├─ ui/                      # situs: C-03, C-05, C-06, C-07, C-08, C-19, C-22, C-26
+   │  │  └─ layout/                  # C-01, C-02, C-04, container.tsx, section.tsx
+   │  ├─ features/
+   │  │  ├─ home/                    # C-10…C-14, C-17, C-18, C-24, C-25, faq-section
+   │  │  ├─ webinar/                 # webinar-section, C-20, C-21, webinar-tabs (client)
+   │  │  └─ admin/                   # modul CMS · lihat §9.4
+   │  ├─ content/
+   │  │  ├─ about.ts                 # Visi & Misi
+   │  │  └─ fallback-links.ts        # link WA/IG/LinkedIn bila site_settings gagal
+   │  └─ lib/
+   │     ├─ supabase/
+   │     │  ├─ server.ts             # anon, tanpa cookie → situs publik (cacheable)
+   │     │  ├─ server-auth.ts        # @supabase/ssr, cookie sesi → CMS
+   │     │  ├─ admin.ts              # service_role + `import "server-only"` → hanya modul Pengguna
+   │     │  ├─ storage.ts            # publicUrl(path)
+   │     │  └─ database.types.ts     # generated
+   │     ├─ queries/                 # publik: satu file per domain, cache + tag
+   │     │  └─ admin/                # CMS: tanpa cache, klien server-auth
+   │     ├─ auth/                    # session.ts (requireStaff/requireAdmin) · permissions.ts
+   │     ├─ env.ts · seo.ts · analytics.ts · utils.ts
+   └─ tests/
+      ├─ unit/                       # vitest
+      └─ e2e/                        # playwright: site (360 & 1440) + admin
 ```
 
 Aturan dependensi:

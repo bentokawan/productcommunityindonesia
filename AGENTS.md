@@ -37,5 +37,6 @@ docs/plan/YYYY-MM-DD-<nama-yang-relevan>.md
 - `SUPABASE_SERVICE_ROLE_KEY` hanya server-side (`lib/supabase/admin.ts`). RLS tidak boleh dimatikan; otorisasi CMS di-enforce RLS.
 - Skema DB hanya berubah lewat migrasi baru di `supabase/migrations/` (satu domain per file).
 - Copy UI Bahasa Indonesia santai ("kamu"); kode & commit Bahasa Inggris.
-- Jalankan `pnpm lint && pnpm typecheck && pnpm test` (+ `pnpm db:test` bila menyentuh DB) sebelum mengklaim selesai.
+- Jalankan `pnpm --dir project lint && pnpm --dir project typecheck && pnpm --dir project test` (+ `pnpm --dir project db:test` bila menyentuh DB) sebelum mengklaim selesai.
+- Aplikasi Next.js berada di `project/` (semua `src/`, `public/`, `tests/`, `package.json`), sedangkan `docs/` dan `supabase/` berada di root agar siap ditambah backend lain di masa depan.
 - Ragu, dokumen bertentangan, atau desain belum ada → **tanya user**.
